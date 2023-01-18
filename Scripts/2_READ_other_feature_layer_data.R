@@ -79,6 +79,9 @@ writeOGR(GB.data,
 
 # WILDERNESS ------------------------------------------------------------------
 
+# Wilderness data presented here:
+# https://wilderness-society.org/wp-content/uploads/2022/08/Wilderness_register_indicator.pdf
+
 # Set up file locations
 source.file.loc <- "R:/rsrch/cb751/lab/Charles/PhD/Chapter4/Data/Spatial_datasets/Wilderness"
 file.name <- "BritishIsles_equal_osgb.tif"
@@ -116,8 +119,8 @@ writeRaster(wild.data,
 
 # POTENTIAL VISITS PER YEAR ---------------------------------------------------
 
-# This is modelled visits per km2 in 2016. Layer available here
-# (https://www.sciencedirect.com/science/article/pii/S1617138116300152#fig0015)
+# This is modelled visits per km2 in 2016. Data presented here:
+# https://www.sciencedirect.com/science/article/pii/S1617138116300152#fig0015
 
 # Set up file locations
 source.file.loc <- "R:/rsrch/cb751/lab/Charles/PhD/Chapter4/Data/Spatial_datasets/Recreation_visits_per_ha/Visit_ha_NP_Euro/pr_kr_bt_nc"
@@ -161,8 +164,8 @@ writeRaster(GB.data,
 # LANDSCAPE VALUE --------------------------------------------------------------------
 
 # This is an proxy of landscape value by taking the average value of several social media platforms
-# Available here (https://www.pnas.org/content/early/2016/10/25/1614158113.abstract)
-# Calculation needed on raw data.
+# Data available here (calculation needed on raw data):
+# https://doi.org/10.1073/pnas.1614158113
 
 ### Read in data
 
@@ -240,8 +243,9 @@ writeRaster(lands.val.big,
 
 # FLOOD REGULATION ES -------------------------------------------------------------------
 
-# This is an estimation of flow of flood regulation ES by weighting the supply by the catchment demand.
-# Calculation needed on raw data.
+# This is an estimation of flow of flood regulation ES.
+# Data available (calculation needed on raw data):
+# http://www.environmentalgeography.nl/site/data-models/data/
 
 ### Read in data
 
@@ -312,6 +316,7 @@ writeRaster(F.flow.r,
 # CARBON ------------------------------------------------------------------------
 
 ### Read in above-ground carbon (tonnes per hectare)
+# Data available: https://doi.org/10.5285/9be652e7-d5ce-44c1-a5fc-8349f76f5f5c
 
 # Set up file locations
 source.file.loc <- "R:/rsrch/cb751/lab/Charles/PhD/Chapter4/Data/Spatial_datasets/Carbon/Above-ground_carbon"
@@ -330,6 +335,7 @@ ag.carbon.r <- rasterFromXYZ(data.frame(x = coordinates(ag.carbon.data)[,1],
 plot(ag.carbon.r)
 
 ### Read in below-ground carbon (ktC km-2 kilotons per km)
+# Data presented here: https://doi.org/10.1079/SUM2005351
 
 # Set up file locations
 source.file.loc <- "R:/rsrch/cb751/lab/Charles/PhD/Chapter4/Data/Spatial_datasets/Carbon/Below-ground_carbon"
@@ -384,9 +390,9 @@ writeRaster(total.carbon.r,
 
 # ES FLOW FOR CROP POLLINATION -----------------------------------------------------------
 
-# This is an estimation of flow of pollination ES by weighting the supply by the demand.
-# Available here (https://www.sciencedirect.com/science/article/pii/S1470160X13002768?via%3Dihub)
-# Calculation needed on raw data.
+# This is an estimation of flow of pollination ES.
+# Data available here (calculation needed on raw data): 
+# http://www.environmentalgeography.nl/site/data-models/data/
 
 ### Read in data
 

@@ -50,6 +50,10 @@ GB.rast <- raster("../Data/Spatial_datasets/GB.raster.tif")
 
 # READ IN ALCs -------------------------------------------------------------
 
+# England: https://data.gov.uk/dataset/952421ec-da63-4569-817d-4d6399df40a1/provisional-agricultural-land-classification-alc
+# Wales: http://lle.gov.wales/catalogue/item/PredictiveAgriculturalLandClassificationALCMap2/?lang=en
+# Scotland: https://www.hutton.ac.uk/learning/natural-resource-datasets/landcover/land-capability-agriculture
+
 # Read in agricultural land classification shapefiles
 ALC.e <- readOGR("../Data/Spatial_datasets/Land_classes/England",
                   "Agricultural_Land_Classification_Provisional_England",
